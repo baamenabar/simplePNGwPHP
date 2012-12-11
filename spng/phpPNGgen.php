@@ -58,6 +58,8 @@ if ( isset($_GET['o']) ) {
 	$options = $_GET;
 	$parts = explode( '_', $_GET['o'] ); 
 	$options['backgroundColor'] = $parts[0];
+	$options['width']= 1;
+	$options['height']= 1;
 	if( count( $parts ) > 1 ){//if we have more than just colour
 		$sizeA = explode( 'x', strtolower($parts[1]) );
 		$options['width'] = $sizeA[0];
